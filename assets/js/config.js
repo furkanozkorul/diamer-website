@@ -10,7 +10,7 @@ window.DIAMER_CONFIG = {
   whatsapp: "50499155636",
   telefono: "+504 2223-2451",
   email: "servicioalcliente@diamerhn.com",
-  formspreeId: "meaedpkv",
+  formspreeId: "xppppwbq",
   facebook: "",
   instagram: "",
   tiktok: "",
