@@ -319,6 +319,10 @@ p:last-child { margin-bottom: 0; }
 }
 .page-hero .hero-stripes { width: min(26vw, 320px); }
 .page-hero-inner { padding-block: clamp(64px, 9vw, 104px); max-width: 720px; }
+/* En móvil las franjas ocupan la esquina inferior: el texto termina por encima de ellas */
+@media (max-width: 760px) { .page-hero-inner { padding-bottom: 104px; } }
+/* En tableta y escritorio las franjas ocupan el borde derecho: el texto no llega hasta ellas */
+@media (min-width: 761px) { .page-hero-inner { max-width: min(720px, calc(100% - min(26vw, 320px) - 24px)); } }
 .page-hero h1 { color: var(--white); font-size: clamp(2.1rem, 4.4vw, 3.4rem); margin-bottom: 16px; }
 .page-hero p { color: var(--on-dark-muted); font-size: 1.15rem; max-width: 580px; }
 .breadcrumb { margin-bottom: 18px; font-size: .95rem; color: var(--sand); }
@@ -405,6 +409,15 @@ p:last-child { margin-bottom: 0; }
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 28px;
 }
+/* Las 4 categorías de la página Productos: cuadrícula de 2 × 2 */
+.lots--categorias { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 700px) { .lots--categorias { grid-template-columns: 1fr; } }
+/* En la página de inicio, 4 tarjetas en una fila para que la sección no quede tan alta */
+@media (min-width: 1100px) {
+  .lots--inicio { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .lots--inicio .lot-specs div { flex-direction: column; gap: 2px; }
+  .lots--inicio .lot-specs dd { text-align: left; }
+}
 .lot {
   display: flex; flex-direction: column;
   background: var(--white);
@@ -425,6 +438,11 @@ p:last-child { margin-bottom: 0; }
 }
 .lot-specs dt { font-weight: 700; color: var(--navy); }
 .lot-specs dd { margin: 0; text-align: right; color: var(--text-muted); }
+/* En teléfonos muy angostos, etiqueta arriba y valor abajo para que no se partan en dos líneas */
+@media (max-width: 360px) {
+  .lot-specs div { flex-direction: column; gap: 2px; }
+  .lot-specs dd { text-align: left; }
+}
 .lot-cta { margin-top: auto; width: 100%; }
 
 .lots-foot { margin-top: 44px; text-align: center; }
@@ -481,31 +499,27 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ==========================================================
-   Categorías
+   Categorías (tarjetas con imagen)
    ========================================================== */
-.categories {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap-tile);
+.cat-cards {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
   list-style: none; margin: 0; padding: 0;
 }
-.categories li {
+.cat-card {
   display: flex; flex-direction: column;
-  padding: 28px 24px 30px;
+  background: var(--white);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  min-height: 260px;
+  overflow: hidden;
 }
-.categories li:nth-child(1) { background: var(--navy); color: var(--white); }
-.categories li:nth-child(2) { background: var(--copper); color: var(--navy-deep); }
-.categories li:nth-child(3) { background: var(--sand); color: var(--navy-deep); }
-.categories li:nth-child(4) { background: var(--navy-soft); color: var(--white); }
-.categories svg { width: 34px; height: 34px; }
-.categories h3 { margin: 56px 0 8px; font-size: 1.3rem; }
-.categories p { margin: 0; font-size: 1rem; opacity: .92; }
-@media (max-width: 1000px) { .categories { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) {
-  .categories { grid-template-columns: 1fr; }
-  .categories li { min-height: 0; }
-  .categories h3 { margin-top: 24px; }
-}
+.cat-card img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--white); border-bottom: 1px solid var(--line); }
+.cat-card-body { display: flex; flex-direction: column; flex: 1; padding: 22px 22px 24px; }
+.cat-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
+.cat-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 20px; }
+.cat-card p:last-child { margin-bottom: 0; }
+.cat-card .btn { margin-top: auto; width: 100%; }
+@media (max-width: 1100px) { .cat-cards { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .cat-cards { grid-template-columns: 1fr; gap: 20px; } }
 
 /* ==========================================================
    Línea de tiempo

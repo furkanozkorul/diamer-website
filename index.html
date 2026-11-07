@@ -55,7 +55,7 @@
         <ul>
           <li><a href="index.html" aria-current="page">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="inventario.html">Inventario</a></li>
+          <li><a href="productos.html">Productos</a></li>
           <li><a class="btn btn-primary nav-cta" href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
@@ -73,7 +73,7 @@
           <h1 id="hero-title">Mercancía original. Precios competitivos. Relaciones basadas en la confianza.</h1>
           <p class="hero-lead">Somos una empresa familiar hondureña con experiencia desde 1997. Comercializamos productos <strong>100 % originales</strong> a precios competitivos y atendemos a <strong>más de 50 clientes a nivel nacional</strong>.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="inventario.html">Ver inventario</a>
+            <a class="btn btn-primary" href="productos.html">Ver productos</a>
             <a class="btn btn-ghost" href="contacto.html" data-wa="Hola DIAMER, quiero agendar una visita a su bodega.">
               <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Agendar visita
             </a>
@@ -114,17 +114,73 @@
       </div>
     </section>
 
-    <!-- Inventario destacado -->
-    <section class="section section--sand" aria-labelledby="inventario-title">
+    <!-- Lo que comercializamos -->
+    <section class="section section--sand" aria-labelledby="productos-title">
       <div class="container">
         <div class="section-head section-head--center">
           <span class="tile-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <h2 id="inventario-title">Inventario disponible</h2>
-          <p>Calzado, ropa, bolsos, artículos para el hogar y cargas mixtas. La disponibilidad cambia con cada lote.</p>
+          <h2 id="productos-title">Lo que comercializamos</h2>
+          <p>La disponibilidad cambia con cada lote.</p>
         </div>
-        <div class="lots" data-lotes="destacados"></div>
+        <div class="lots lots--categorias lots--inicio">
+          <article class="lot">
+            <div class="lot-media"><img src="assets/img/categoria-calzado.jpg" alt="Variedad de calzado deportivo, botas vaqueras y de trabajo, sandalias y zapatos de vestir" width="800" height="800" loading="lazy"></div>
+            <div class="lot-body">
+              <h3 class="lot-title">Calzado</h3>
+              <p class="lot-desc">Variedad de calzado americano de distintas marcas y categorías. Podés encontrar zapato deportivo, de vestir, de fiesta, vaquera y de oficina, así como botas de trabajo con y sin puntera de protección.</p>
+              <dl class="lot-specs">
+                <div><dt>Se vende por</dt><dd>Caja, pallet o fardo</dd></div>
+                <div><dt>Procedencia</dt><dd>Estados Unidos</dd></div>
+                <div><dt>Compra mínima</dt><dd>Sin monto mínimo</dd></div>
+              </dl>
+              <a class="btn btn-wa lot-cta" href="contacto.html" data-wa="Hola DIAMER, me interesa la categoría Calzado. ¿Qué tienen disponible?"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-whatsapp"/></svg>Consultar disponibilidad</a>
+            </div>
+          </article>
+
+          <article class="lot">
+            <div class="lot-media"><img src="assets/img/categoria-ropa.jpg" alt="Ropa deportiva, casual y vaquera: sudaderas, vestidos, faldas, jeans y camisas" width="800" height="800" loading="lazy"></div>
+            <div class="lot-body">
+              <h3 class="lot-title">Ropa</h3>
+              <p class="lot-desc">Prendas usadas y de liquidación, incluidas piezas de marcas reconocidas. Podés consultar sobre ropa deportiva, vaquera y casual, entre muchas otras opciones.</p>
+              <dl class="lot-specs">
+                <div><dt>Se vende por</dt><dd>Caja, pallet o fardo</dd></div>
+                <div><dt>Procedencia</dt><dd>Estados Unidos</dd></div>
+                <div><dt>Compra mínima</dt><dd>Sin monto mínimo</dd></div>
+              </dl>
+              <a class="btn btn-wa lot-cta" href="contacto.html" data-wa="Hola DIAMER, me interesa la categoría Ropa. ¿Qué tienen disponible?"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-whatsapp"/></svg>Consultar disponibilidad</a>
+            </div>
+          </article>
+
+          <article class="lot">
+            <div class="lot-media"><img src="assets/img/categoria-carteras.jpg" alt="Carteras, mochilas, billeteras, cinturones, lentes de sol y accesorios" width="800" height="800" loading="lazy"></div>
+            <div class="lot-body">
+              <h3 class="lot-title">Carteras y accesorios</h3>
+              <p class="lot-desc">Una selección de carteras y accesorios de distintas marcas, incluyendo artículos usados, de liquidación y de retorno de tiendas americanas.</p>
+              <dl class="lot-specs">
+                <div><dt>Se vende por</dt><dd>Caja, pallet o fardo</dd></div>
+                <div><dt>Procedencia</dt><dd>Estados Unidos</dd></div>
+                <div><dt>Compra mínima</dt><dd>Sin monto mínimo</dd></div>
+              </dl>
+              <a class="btn btn-wa lot-cta" href="contacto.html" data-wa="Hola DIAMER, me interesa la categoría Carteras y accesorios. ¿Qué tienen disponible?"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-whatsapp"/></svg>Consultar disponibilidad</a>
+            </div>
+          </article>
+
+          <article class="lot">
+            <div class="lot-media"><img src="assets/img/categoria-otras.jpg" alt="Cajas misteriosas de mercancía general" width="800" height="800" loading="lazy"></div>
+            <div class="lot-body">
+              <h3 class="lot-title">Otras mercancías</h3>
+              <p class="lot-desc">Podés encontrar artículos para el hogar, mercancía general, Cajas Misteriosas y LPN: AMZ/TGT/WMT.</p>
+              <dl class="lot-specs">
+                <div><dt>Se vende por</dt><dd>Caja, pallet o fardo</dd></div>
+                <div><dt>Procedencia</dt><dd>Estados Unidos</dd></div>
+                <div><dt>Compra mínima</dt><dd>Sin monto mínimo</dd></div>
+              </dl>
+              <a class="btn btn-wa lot-cta" href="contacto.html" data-wa="Hola DIAMER, me interesa la categoría Otras mercancías. ¿Qué tienen disponible?"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-whatsapp"/></svg>Consultar disponibilidad</a>
+            </div>
+          </article>
+        </div>
         <div class="lots-foot">
-          <a class="btn btn-dark" href="inventario.html">Ver todo el inventario</a>
+          <a class="btn btn-dark" href="productos.html">Ver productos</a>
         </div>
       </div>
     </section>
@@ -194,7 +250,7 @@
         <ul class="footer-links">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="inventario.html">Inventario</a></li>
+          <li><a href="productos.html">Productos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
@@ -219,6 +275,5 @@
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/inventario.js"></script>
 </body>
 </html>

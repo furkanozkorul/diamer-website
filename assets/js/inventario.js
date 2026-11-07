@@ -3,7 +3,7 @@
  * Para agregar un lote, copie un bloque { ... } y cambie sus datos.
  * Para quitar un lote, borre su bloque.
  *
- * categoria: "calzado" | "ropa" | "bolsos" | "hogar" | "mixta"
+ * categoria: "calzado" | "ropa" | "carteras" | "otras"
  * destacado: true = aparece también en la página de inicio (máx. 3)
  */
 window.DIAMER_LOTES = [
@@ -39,7 +39,7 @@ window.DIAMER_LOTES = [
   },
   {
     titulo: "Mercancía general de grandes cadenas",
-    categoria: "mixta",
+    categoria: "otras",
     imagen: "assets/img/lote-1.jpg",
     descripcion: "Devoluciones y sobreinventario de tiendas de EE. UU. Buena variedad para tiendas de descuento.",
     venta: "Pallet",
@@ -49,7 +49,7 @@ window.DIAMER_LOTES = [
   },
   {
     titulo: "Artículos de cocina y hogar",
-    categoria: "hogar",
+    categoria: "otras",
     imagen: "assets/img/lote-cocina.jpg",
     descripcion: "Cafeteras, utensilios y pequeños electrodomésticos de cocina provenientes de devoluciones.",
     venta: "Pallet",
@@ -59,7 +59,7 @@ window.DIAMER_LOTES = [
   },
   {
     titulo: "Caja de artículos para el hogar",
-    categoria: "hogar",
+    categoria: "otras",
     imagen: "assets/img/lote-2.jpg",
     descripcion: "Baterías de cocina, organizadores y artículos para el hogar en empaque original.",
     venta: "Caja",
@@ -69,7 +69,7 @@ window.DIAMER_LOTES = [
   },
   {
     titulo: "Caja de mercancía mixta",
-    categoria: "mixta",
+    categoria: "otras",
     imagen: "assets/img/lote-3.jpg",
     descripcion: "Productos de cuidado personal, bebé, juguetes y accesorios. El contenido varía en cada caja.",
     venta: "Caja",
@@ -79,7 +79,7 @@ window.DIAMER_LOTES = [
   },
   {
     titulo: "Pallets de mercancía general",
-    categoria: "mixta",
+    categoria: "otras",
     imagen: "assets/img/lote-4.jpg",
     descripcion: "Carga mixta de artículos para el hogar, juguetes y productos de temporada.",
     venta: "Pallet",
@@ -89,7 +89,7 @@ window.DIAMER_LOTES = [
   },
   {
     titulo: "Carga completa de devoluciones",
-    categoria: "mixta",
+    categoria: "otras",
     imagen: "assets/img/lote-5.jpg",
     descripcion: "Cajas de devoluciones de plataformas de venta en línea. Se vende por pallet.",
     venta: "Pallet",
@@ -102,7 +102,7 @@ window.DIAMER_LOTES = [
 (function () {
   "use strict";
   var lotes = window.DIAMER_LOTES;
-  var nombres = { calzado: "Calzado", ropa: "Ropa", bolsos: "Bolsos y accesorios", hogar: "Hogar", mixta: "Carga mixta" };
+  var nombres = { calzado: "Calzado", ropa: "Ropa", carteras: "Carteras y accesorios", otras: "Otras mercancías" };
 
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
